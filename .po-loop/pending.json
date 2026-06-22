@@ -1,0 +1,64 @@
+{
+  "feature": "Log_In",
+  "poAppToken": "V1zwwCnBKiKa1EkUg6hltwzdggg",
+  "poTableId": "tbl8FuofRGUhkK1M",
+  "sentAt": 1782114272,
+  "records": [
+    {
+      "recordId": "recvnfXRZesgWw",
+      "id": "Q1",
+      "topic": "[HA1] 🔴 ข้อความ error เมื่อ credential ผิด (Username ไม่มี / Password ผิด)\n\nทำไมต้องรู้: ต้องใส่ exact text ใน Expected Result — ปัจจุบัน SIT แสดง `login_failed Request failed with status code 403` ซึ่ง expose HTTP status ตรงๆ (ควรแก้ก่อน sign-off)\nกระทบ: TA-01_TC-04, TA-02_TC-04",
+      "proposed": "✅ ข้อเสนอ: แสดงข้อความ generic ว่า \"Username หรือ Password ไม่ถูกต้อง\" อันเดียว (ไม่แยก user/pass เพื่อกัน account enumeration · ไม่โชว์ HTTP status code)\n\nPO เลือก:\n☐ ✅ ยืนยันตามนี้\n☐ ❌ ไม่ใช่ → ข้อความที่ถูกต้องคือ ____\n☐ ไม่รู้ → ถามใคร/หาที่ไหน ____",
+      "status": "open",
+      "answer": null
+    },
+    {
+      "recordId": "recvnfXRZeBlr7",
+      "id": "Q2",
+      "topic": "[HA2] 🟠 Remember me — session คงอยู่นานแค่ไหน?\n\nทำไมต้องรู้: กำหนดวิธีทดสอบ TS-02 และ TA-06 (รอกี่ชั่วโมง/วัน ถึงหมด session)\nกระทบ: TS-02_TC-05, TA-06_TC-05",
+      "proposed": "✅ ข้อเสนอ: ไม่ต้องระบุ timeout ที่แน่ชัด — ทดสอบแค่ว่าปิด browser แล้วเปิดใหม่ภายในวันเดียวกัน ยังล็อกอินอยู่หรือไม่\n\nPO เลือก:\n☐ ✅ ยืนยันตามนี้ (ไม่มี timeout กำหนด)\n☐ ❌ ไม่ใช่ → timeout = ____ ชั่วโมง/วัน\n☐ ไม่รู้ → ถามใคร ____",
+      "status": "open",
+      "answer": null
+    },
+    {
+      "recordId": "recvnfXRZeHHbB",
+      "id": "Q3",
+      "topic": "[HA3] 🔴 Organization dropdown — มี default value หรือไม่?\n\nทำไมต้องรู้: screenshot แสดง \"SKY AI\" pre-filled แต่ spec เก่าบอก placeholder \"Select Organization\" — ถ้ามี default จะต้องแก้ Arrange ของ TS-01, TA-03, TA-04\nกระทบ: TS-01_TC-01, TA-03_TC-01, TA-04_TC-01",
+      "proposed": "✅ ข้อเสนอ: ไม่มี default — \"SKY AI\" ที่เห็นในภาพเกิดจาก Remember me ของผู้ใช้ ต้อง test ใน incognito/clear session เพื่อเห็น placeholder \"Select Organization\"\n\nPO เลือก:\n☐ ✅ ยืนยัน (ไม่มี default)\n☐ ❌ ไม่ใช่ → มี default Org = ____\n☐ ไม่รู้ → ถามใคร ____",
+      "status": "open",
+      "answer": null
+    },
+    {
+      "recordId": "recvnfXRZeLAJ7",
+      "id": "Q4",
+      "topic": "[HA4] 🟠 Organization dropdown — รายชื่อ org ปัจจุบันมีกี่ org?\n\nทำไมต้องรู้: spec เก่าระบุ 8 org แต่อาจมีการเพิ่ม/ลด — กระทบ test data ที่เลือก org อื่นนอกจาก SKY AI\nกระทบ: LG1",
+      "proposed": "✅ ข้อเสนอ: ยังมี 8 org เดิม ได้แก่ SKY, Metthier, Astro, ProInside, MT - OHQ, SKY CC, SKY CC(CXM), SKY AI\n\nPO เลือก:\n☐ ✅ ยืนยัน (8 org เดิม)\n☐ ❌ ไม่ใช่ → รายการปัจจุบันคือ ____\n☐ ไม่รู้ → ถามใคร ____",
+      "status": "open",
+      "answer": null
+    },
+    {
+      "recordId": "recvnfXRZeXzR9",
+      "id": "Q5",
+      "topic": "[HA5] 🔴 ข้อความ error เมื่อ Lark Account ไม่มีสิทธิ์ HRMS\n\nทำไมต้องรู้: ต้องใส่ exact text ใน Expected Result ของ TA-05\nกระทบ: TA-05_TC-02",
+      "proposed": "✅ ข้อเสนอ: แสดงข้อความ `You don't have the access to \"HRMS (Sit)\"` (ตามที่เคยพบจาก SIT phase 5)\n\nPO เลือก:\n☐ ✅ ยืนยัน (ใช้ข้อความนี้)\n☐ ❌ ไม่ใช่ → ข้อความที่ถูกต้องคือ ____\n☐ ไม่รู้ → ถามใคร ____",
+      "status": "open",
+      "answer": null
+    },
+    {
+      "recordId": "recvnfXRZeJOXW",
+      "id": "Q6",
+      "topic": "[HA6] 🔴 Open Redirect — ?go= parameter ได้รับการแก้แล้วหรือยัง?\n\nทำไมต้องรู้: กำหนด Expected Result ของ SEC-01_TC-02 ว่าเป็น PASS หรือ FAIL\nกระทบ: SEC-01_TC-02",
+      "proposed": "✅ ข้อเสนอ: ยังไม่ได้แก้ → SEC-01_TC-02 คาด FAIL (redirect ออกไปภายนอก = Security Bug) · ควรเปิด bug card แยก\n\nPO เลือก:\n☐ ✅ ยืนยัน (ยังไม่แก้ → บันทึก bug ต่อ)\n☐ ❌ แก้แล้ว → verify ผลใหม่\n☐ ไม่รู้ → ถามใคร (Dev) ____",
+      "status": "open",
+      "answer": null
+    },
+    {
+      "recordId": "recvnfXRZe9LT0",
+      "id": "Q7",
+      "topic": "[HA7] 🟠 Password policy — ระบบ validate format ที่หน้า Login หรือไม่?\n\nทำไมต้องรู้: ถ้าบังคับที่ Login จะต้องเพิ่ม BVA test case (< 8 chars, ไม่มีตัวเลข ฯลฯ)\nกระทบ: LG10 (อาจเพิ่ม test case)",
+      "proposed": "✅ ข้อเสนอ: ไม่ validate format ที่หน้า Login — ตรวจแค่ว่า hash ตรง DB (policy บังคับเฉพาะตอนตั้ง/เปลี่ยนรหัสเท่านั้น) → ไม่ต้องเพิ่ม LG10\n\nPO เลือก:\n☐ ✅ ยืนยัน (ไม่ validate ที่ Login)\n☐ ❌ ไม่ใช่ → validate ที่ Login ด้วย → เพิ่ม LG10\n☐ ไม่รู้ → ถามใคร ____",
+      "status": "open",
+      "answer": null
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "_comment": "คัดลอกเป็น lark.config.json. ค่าเหล่านี้เป็น 'ID' ไม่ใช่ความลับ (ความลับคือ LARK_APP_ID/SECRET ใน env). lark.config.json ถูก gitignore",
+  "_host": "Lark international = https://open.larksuite.com · Feishu CN = https://open.feishu.cn",
+  "_note": "เขียนเฉพาะ 5 คอลัมน์ผล (Test Result/Result Note/Remark/Test Date/Test By) ตาม TestcaseNo — คอลัมน์ design อื่นเป็น lookup จาก TestCases อย่าเขียนทับ",
+  "_fieldTypes": "ถ้า Test Date เป็น Date field → ตั้ง dateAsTimestamp=true (ส่งเป็น ms) · ถ้า Test By เป็น Person field ต้องใช้ user_id (ค่อยปรับ)",
+  "_auth": "admin กำหนดให้ใช้ User token → authMode=user (ต้องทำ OAuth ครั้งเดียว: npm run lark:oauth). ถ้าใช้ server-to-server ตั้ง authMode=tenant",
+  "apiBase": "https://open.larksuite.com",
+  "authMode": "user",
+  "redirectUri": "http://localhost:3000/callback",
+  "poAppToken": "V1zwwCnBKiKa1EkUg6hltwzdggg",
+  "poTableId": "tbl8FuofRGUhkK1M",
+  "tcAppToken": "V1zwwCnBKiKa1EkUg6hltwzdggg",
+  "tcTableId": "tblC7WCiPziTnyf1",
+  "poViewId": "",
+  "appToken": "V1zwwCnBKiKa1EkUg6hltwzdggg",
+  "tableId": "tblC7WCiPziTnyf1",
+  "upsertKey": "TC No.",
+  "dateAsTimestamp": true,
+  "fieldMapping": {
+    "testcaseNo": "TC No.",
+    "testResult": "Test Result",
+    "resultNote": "Result Note",
+    "remark": "Remark",
+    "testDate": "Test Date",
+    "testBy": "Test By"
+  }
+}

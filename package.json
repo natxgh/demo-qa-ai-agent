@@ -1,0 +1,32 @@
+{
+  "name": "hrms-login-automation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Playwright E2E for HRMS Login — generated from the QA AI pilot test design",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "list": "playwright test --list",
+    "report": "playwright show-report",
+    "cards": "node scripts/gen-bug-cards.mjs",
+    "evidence": "node scripts/gen-evidence-pack.mjs",
+    "file:lark": "node ../plugins/qa-pilot/skills/results-to-lark/scripts/upload-to-lark.mjs",
+    "execute": "playwright test; node scripts/gen-bug-cards.mjs",
+    "capture": "playwright test; node scripts/gen-bug-cards.mjs; node scripts/gen-evidence-pack.mjs",
+    "s2p": "npm run capture; npm run file:lark",
+    "s2p:confirm": "npm run capture && npm run file:lark -- --confirm",
+    "lark:oauth": "node scripts/lark-oauth.mjs",
+    "ask:po": "node scripts/ask-po.mjs",
+    "poll:po": "node scripts/poll-po.mjs",
+    "upload:tc": "node scripts/upload-testcases.mjs",
+    "upload:tc:confirm": "node scripts/upload-testcases.mjs --confirm"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.59.1"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "exceljs": "^4.4.0"
+  }
+}
